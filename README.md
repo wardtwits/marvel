@@ -12,6 +12,7 @@ Features
 
 
 TO DO:
+* Add search filter by year
 * This is some-what responsive but needs work, I didn't have time yet to test or fix bugs on many different devices
 * Need to add a spinner (for IE and older browsers)
 * Add smooth scrolling, easy just haven't had time
