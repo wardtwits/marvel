@@ -36,12 +36,13 @@
 
 		// initial search to get char pics for home page slider
 		getCharPics = function(id) {
-			var url = 'http://gateway.marvel.com:80/v1/public/characters/'+id+'?apikey='+KEY;
+			var n = Math.floor(Math.random() * (34333 - 55 + 1)) + 2, /* Needed for IE9 ? */
+				url = 'http://gateway.marvel.com:80/v1/public/characters/'+id+'?apikey='+KEY+"&callback="+n;
 	
 			return $.ajax({
 				  url: url,
 				  type: 'GET',
-				  dataType: 'jsonp' /* needed for IE  */
+				  dataType: 'jsonp' /* needed for old IE  */
 				});	
 		},
 
@@ -57,11 +58,7 @@
 				settings = $.extend(defaults, settings),
 				url = "http://gateway.marvel.com/v1/public/comics?limit="+settings.limit+"&offset="+settings.offset+"&noVariants=true&orderBy=onsaleDate&format=comic&dateRange="+settings.yearStart+"-01-01%2C"+settings.yearEnd+"-12-31&formatType=comic&characters="+settings.charList+"&apikey="+KEY;
 
-				return $.ajax({
-					  url: url,
-					  type: 'GET',
-					  dataType: 'json' /* jsonP needed for IE */
-					});	
+				return $.getJSON(url);	
 		},
 
 		getHomePageCharacters = function() {
@@ -186,7 +183,7 @@
 			// clear out old results
 			$results.empty();
 
-			if(d.code === 200 && d.data) {
+			if(d.code === 200 && d.data && d.data.results.length > 0) {
 				limit = d.data.limit;
 				total = d.data.total;
 				offset = d.data.offset;
