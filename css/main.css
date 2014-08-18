@@ -565,6 +565,13 @@ section {
 	.bx-next, 
 	.bx-prev,
 	.mobileHide { display: none; }
+	
+	.nav.bubble {
+		background: none;
+		border: none; }
+	
+	.nav.bubble:before,
+	.nav.bubble:after { display: none; }	
 
 	.carouselTitle {
 		font-size: 250%;
@@ -610,8 +617,11 @@ section {
 	#openNav {
 		display: block;
 		float: right;
-		font-size: 200%;
+		font-size: 100%;
 		margin-top: 23px; }
+		
+	#openNav.marvel {
+		font-size: 100%; }
 
 	#exitNav {
 		color: #fff;
