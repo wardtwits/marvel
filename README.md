@@ -33,4 +33,4 @@ Technology:
 * jQuery 2.1.1
 * Handlebars.js 1.3.0 (for templating json data)
 * Bootstrap / Bootstrap select (for the multi drop down)
-* BX Slider for the carousel  (could probably switch to bootstrap's carousel, very similar)
+* BX Slider for the carousel  (bootstrap's carousel uses css3 animation with no fallback, doesn't support IE8/9)
