@@ -18,7 +18,7 @@ TO DO:
 * Fine tune search character thumbs for smaller devices
 
 FYI:
-* I was hoping to have a pop-up (from the carousel) with way more character stats but I couldn't find them in the API
+* The downside on the API is that some calls (i.e char stats) only give a URL for a link back, no real data you can use
 * I had wanted to add a little more functionality but I've hit the API limit a few times and had to wait or borrow keys
 
 
