@@ -3,18 +3,25 @@ marvel
 
 JavaScript demo utilizing the Marvel API
 
-This is a basic site demo using Marvel Comic's API
+This is a site demo using Marvel Comic's API
 
 Features
-* When you first load the site we'll fetch a default number of characters with imgages and descriptions, unfortunately you have to make one API call at a time for each.  These images/descriptions will load into our carousel.  It's a bit of a slow load so I've added a spinner, I would look at doing things differently for a commercial site.
+* Carousel - View top Marvel heroes and description / click them to view more detail at Marvel.com
 
-* Characters Link (or scroll down): Here you can choose 1 or more characters in the drop down list and see what comics they've been in together.  We return 20 results at a time (keep in mind our API limit is 3000 hits per day)
+* Characters Link (or scroll down): Here you can choose 1 or more characters in the drop down list and see their comics. We return 20 results at a time (keep in mind our API limit is 3000 hits per day) and you can continue fetching results.
+* Clicking on a comicbook will bring you to Marvel's site with more info
 
+INFO:
+* When you first load the site we'll fetch a default number of characters/ imgages and descriptions, unfortunately you have to make one API call at a time for each based on ID.  These images/descriptions will load into our carousel.  It's a bit slow (caching or using putting these in local storage would be nice to add).  
+* We re-use the carousel image links to populate thumbnails on the drop down search.
 
-TO DO:
+BUG:
+* Unfortunately I just came across a cross-site scripting bug in IE9 that causes the drop down search to hang. While JSONP should work, it appears there is some compat issue with jQuery and I'm still searching for the fix on this.
+
+TO DO / nice to have:
 * Add search filter by year
 * This is some-what responsive but needs work, I didn't have time yet to test or fix bugs on many different devices
-* Need to add a spinner (for IE and older browsers)
+* Spinner animation is compat with IE10+ / add more compat spinner
 * Fine tune search character thumbs for smaller devices
 
 FYI:
@@ -23,7 +30,7 @@ FYI:
 
 
 Technology:
-* jQuery
-* Handlebars.js (for templating)
+* jQuery 2.1.1
+* Handlebars.js 1.3.0 (for templating json data)
 * Bootstrap / Bootstrap select (for the multi drop down)
-* BX Slider for the carousel
+* BX Slider for the carousel  (could probably switch to bootstrap's carousel, very similar)
