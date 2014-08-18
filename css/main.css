@@ -430,6 +430,10 @@ section {
 /********************************************/
 
 .btn {
+	color: #000;
+	background: #fff;
+	box-shadow: 2px 2px 2px #ccc;
+	font-size: 130%;
 	line-height: inherit !important;
 	vertical-align: top; }
 

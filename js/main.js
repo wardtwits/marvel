@@ -41,7 +41,7 @@
 			return $.ajax({
 				  url: url,
 				  type: 'GET',
-				  dataType: 'jsonp' /* needed for IE */
+				  dataType: 'jsonp' /* needed for IE  */
 				});	
 		},
 
@@ -278,6 +278,8 @@
 			$clearSelection.on('click', function() {
 				// empty dropdown selection
 				$ddList.selectpicker('deselectAll');
+				// disable submit
+				$submitMe.attr("disabled", "disabled");
 			});	
 
 			$submitMe.on('click', function() {
