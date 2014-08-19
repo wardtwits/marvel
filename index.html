@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="bower_components/bxSlider/jquery.bxslider.css" />
 	<link href='http://fonts.googleapis.com/css?family=Oswald|Shadows+Into+Light' rel='stylesheet'>
 	<link rel="stylesheet" href="css/main.css" media="screen">
-	<meta name="author" content="Chris Ward"><!-- Updated: 8.17.2014 -->
+	<meta name="author" content="Chris Ward"><!-- Updated: 8.18.2014 -->
 	<title>Marvel API Demo</title>
 </head>
 
@@ -17,7 +17,7 @@
 
   <header role="banner">
   	<div class="innerHeader row">
-  		<div class="col-xs-12 col-md-7 col-md-push-2 col-xs-10">
+  		<div class="col-xs-12 col-md-8 col-md-push-2 col-xs-10">
 		  		<p class="marvel col-xs-3">MARVELICIOUS</p>
 
 		  		<a href="javascript:void(0);" id="openNav">Menu</a>
@@ -56,6 +56,19 @@
 			<div class="charForm col-xs-offset-2">
 				<p class="marvel medSize">Choose your favorite characters and see what comics they're in.</p>
 				<div class="thumbs mobileHide col-xs-1 col-md-7"></div>
+				
+				<div class="dateYearsWrap">
+					<select class="startYearpicker show-menu-arrow comic" data-live-search="true" title="start year">
+						<option value="">start year</option>
+						<!-- start year choices -->
+					</select>
+					<select class="endYearpicker show-menu-arrow comic" data-live-search="true" title="end year">
+						<option value="">end year</option>
+						<!-- start year choices -->
+					</select>
+					<span class="comic">(years are optional)</span>					
+				</div>
+
 				<select class="selectpicker show-menu-arrow comic" multiple data-live-search="true" title="choose wisely">
 					<!-- our characters go here -->
 				</select>
@@ -115,7 +128,7 @@
 	<!-- our character/comic search: pintrest style display -->
 	<script id="reportTemplate" type="text/x-handlebars-template">
 		<div class="pin">
-			<a href="{{url}}" target=_blank"><img src="{{image}}" class="thumb"></a>
+			<a href="{{url}}" target="_blank"><img src="{{image}}" class="thumb"></a>
 			<p class="title">{{title}}</p>
 			<p class="desc"></p>
 		</div>
