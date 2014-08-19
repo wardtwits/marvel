@@ -445,6 +445,7 @@ section {
 	
 .bootstrap-select { 
  	/* why on earth did they hard code 220px? */ 
+ 	max-width: 220px;
  	width: auto !important; } 
 
 /* ************* SPINNER for search (need one for older browsers) **** */
