@@ -442,6 +442,10 @@ section {
 
 .selectpicker li a span {
 	font-size: 150%; }
+	
+.bootstrap-select { 
+ 	/* why on earth did they hard code 220px? */ 
+ 	width: auto !important; } 
 
 /* ************* SPINNER for search (need one for older browsers) **** */
 /******************************************/
