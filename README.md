@@ -19,7 +19,6 @@ BUG:
 * Unfortunately I just came across a cross-site scripting bug in IE9 that causes the drop down search to hang. While JSONP should work, it appears there is some compat issue with jQuery and I'm still searching for the fix on this.
 
 TO DO / nice to have:
-* Add search filter by year
 * This is some-what responsive but needs work, I didn't have time yet to test or fix bugs on many different devices
 * Spinner animation is compat with IE10+ / add more compat spinner
 * Fine tune search character thumbs for smaller devices
