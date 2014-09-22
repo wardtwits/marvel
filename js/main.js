@@ -15,7 +15,7 @@
 	*/
 	var marvel = function() {
 
-		var	KEY = "0fe58099f62eeec2e5b566a2be6cffe9", // api key
+		var	KEY = "123", // api key
 			$defaultImg = 'images/default.png',
 			$ddList = $('.selectpicker'),
 			$syList = $('.startYearpicker'),
