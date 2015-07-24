@@ -5,6 +5,8 @@ JavaScript demo utilizing the Marvel API
 
 This is a site demo using Marvel Comic's API
 
+** Demo ** http://www.wardcreations.com/demos/marvel/
+
 Features
 * Carousel - View top Marvel heroes and description / click them to view more detail at Marvel.com
 
